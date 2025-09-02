@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, Spin, Pagination } from "antd";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ export default function Home() {
     setLoading(true);
     try {
       const url =
-       ` https://last-airbender-api.fly.dev/api/v1/characters?perPage=${pageSize}&page=${currentPage}`;
+       ` https://last-airbender-api.fly.dev/api/v1/characters?perPage=500`;
       const response = await axios.get(url);
       const data = response.data;
       setCharacters(data);
@@ -30,6 +30,11 @@ export default function Home() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchCharacters();
+}, [currentPage]);
+
 
   // Calcula quais usuários mostrar na página atual
   const startIndex = (currentPage - 1) * pageSize;
