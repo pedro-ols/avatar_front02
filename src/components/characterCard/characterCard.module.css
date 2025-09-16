@@ -1,0 +1,243 @@
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .imageContainer img {
+  transform: scale(1.1);
+}
+
+.characterInfo {
+  margin: 0;
+  text-align: center;
+}
+
+.characterInfo:first-of-type {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.9;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === ESTILOS POR AFILIAÇÃO === */
+
+/* Nação do Fogo */
+.fireNation {
+  border-color: #dc2626;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(249, 115, 22, 0.1) 100%);
+}
+
+.fireNation::before {
+  background: linear-gradient(90deg, #dc2626, #f97316);
+}
+
+.fireNation:hover::before {
+  transform: scaleX(1);
+}
+
+.fireNation .imageContainer {
+  background: linear-gradient(135deg, #dc2626, #f97316);
+}
+
+.fireNation .characterInfo:first-of-type {
+  background: linear-gradient(45deg, #dc2626, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fireNation .subtitle {
+  background: linear-gradient(135deg, #dc2626, #f97316);
+  color: white;
+}
+
+/* Tribo da Água */
+.waterTribe {
+  border-color: #1e40af;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.waterTribe::before {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+}
+
+.waterTribe:hover::before {
+  transform: scaleX(1);
+}
+
+.waterTribe .imageContainer {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+}
+
+.waterTribe .characterInfo:first-of-type {
+  background: linear-gradient(45deg, #1e40af, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.waterTribe .subtitle {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+}
+
+/* Reino da Terra */
+.earthKingdom {
+  border-color: #16a34a;
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(132, 204, 22, 0.1) 100%);
+}
+
+.earthKingdom::before {
+  background: linear-gradient(90deg, #16a34a, #84cc16);
+}
+
+.earthKingdom:hover::before {
+  transform: scaleX(1);
+}
+
+.earthKingdom .imageContainer {
+  background: linear-gradient(135deg, #16a34a, #84cc16);
+}
+
+.earthKingdom .characterInfo:first-of-type {
+  background: linear-gradient(45deg, #16a34a, #84cc16);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.earthKingdom .subtitle {
+  background: linear-gradient(135deg, #16a34a, #84cc16);
+  color: white;
+}
+
+/* Nômades do Ar */
+.airNomads {
+  border-color: #f3f1ef;
+  background: linear-gradient(135deg, rgba(220, 213, 207, 0.1) 0%, rgba(157, 155, 150, 0.1) 100%);
+}
+
+.airNomads::before {
+  background-color: #f3f1ef;
+}
+
+.airNomads:hover::before {
+  transform: scaleX(1);
+}
+
+.airNomads .imageContainer {
+    background: linear-gradient(90deg, #ffffff,#f3f1ef);
+}
+
+.airNomads .characterInfo:first-of-type {
+    background: linear-gradient(90deg, #484543,#f3f1ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.airNomads .subtitle {
+  background-color: #ffffff;
+  color: white;
+}
+
+/* Neutro/Outros */
+.neutral {
+  border-color: #6b7280;
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.1) 0%, rgba(156, 163, 175, 0.1) 100%);
+}
+
+.neutral::before {
+  background: linear-gradient(90deg, #6b7280, #9ca3af);
+}
+
+.neutral:hover::before {
+  transform: scaleX(1);
+}
+
+.neutral .imageContainer {
+  background: linear-gradient(135deg, #6b7280, #9ca3af);
+}
+
+.neutral .characterInfo:first-of-type {
+  background: linear-gradient(45deg, #6b7280, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.neutral .subtitle {
+  background: linear-gradient(135deg, #6b7280, #9ca3af);
+  color: white;
+}
+
+/* Animações especiais para cada elemento */
+.fireNation:hover {
+  box-shadow: 0 25px 70px rgba(220, 38, 38, 0.4);
+}
+
+.waterTribe:hover {
+  box-shadow: 0 25px 70px rgba(30, 64, 175, 0.4);
+}
+
+.earthKingdom:hover {
+  box-shadow: 0 25px 70px rgba(22, 163, 74, 0.4);
+}
+
+.airNomads:hover {
+  box-shadow: 0 25px 70px rgba(255, 255, 255, 0.4);
+}
+
+.neutral:hover {
+  box-shadow: 0 25px 70px rgba(107, 114, 128, 0.4);
+}
