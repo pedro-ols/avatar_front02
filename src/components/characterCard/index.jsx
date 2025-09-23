@@ -2,7 +2,6 @@ import styles from './characterCard.module.css';
 import Image from 'next/image';
 
 export default function CharacterCard({ character }) {
-  // Função para determinar a classe CSS baseada na afiliação
   const getAffiliationClass = (affiliation) => {
     if (!affiliation) return styles.neutral;
     
@@ -38,10 +37,11 @@ export default function CharacterCard({ character }) {
 
       <h2 className={styles.characterInfo}>{character.name}</h2>
       <h3 className={`${styles.subtitle} ${styles.characterInfo}`}>
+        <h4 className={styles.affiliationText}>Afiliação:</h4>
         {character.allies.map((ally, index) => (
-          <p key={index}>
-            {ally}
-          </p>
+          <p key={index} className={styles.allyText}>
+          {ally.charAt(0).toUpperCase() + ally.slice(1).toLowerCase()}
+        </p>
         ))}
       </h3>
     </div>

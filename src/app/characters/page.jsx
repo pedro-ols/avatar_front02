@@ -38,17 +38,14 @@ export default function Home() {
   }, [currentPage]);
 
 
-  // Calcula quais usuários mostrar na página atual
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const currentCharacters = characters.slice(startIndex, endIndex);
 
-  // Função para mudar de página
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  // Função para mudar quantidade de itens por página
   const handlePageSizeChange = (current, size) => {
     setPageSize(size);
     setCurrentPage(1);
@@ -56,9 +53,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>🌊🔥Avatar - Personagens💨🌱</h1>
-      </header>
+      
       <section className={styles.paginationSection}>
         <Pagination
           total={characters.length}
