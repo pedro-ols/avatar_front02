@@ -20,20 +20,20 @@ export default function Home() {
           <h1 className={styles.heroTitle}>Pedro de Oliveira Santos</h1>
           <div className={styles.infoCard}>
             <div className={styles.infoItem}>
-              <span className={styles.infoLabel}>🏫 Escola:</span>
+              <span className={styles.infoLabel}><b>Escola:</b></span>
               <span className={styles.infoValue}>SENAI Valinhos</span>
             </div>
             <div className={styles.infoItem}>
-              <span className={styles.infoLabel}>📚 Turma:</span>
+              <span className={styles.infoLabel}><b>Turma:</b></span>
               <span className={styles.infoValue}>2tds2</span>
             </div>
           </div>
 
           <blockquote className={styles.quote}>
             <p className={styles.quoteText}>
-              "A vida é como andar de bicicleta. Para manter o equilíbrio, você deve continuar se movendo."
+              "É importante olhar para a luz e não para as trevas. Deve-se atrair aquilo que se pensa, por isso é preciso ser positivo."
             </p>
-            <cite className={styles.quoteAuthor}>- Albert Einstein</cite>
+            <cite className={styles.quoteAuthor}>- Tio Iroh</cite>
           </blockquote>
         </div>
       </section>
