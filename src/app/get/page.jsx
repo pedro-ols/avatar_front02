@@ -32,12 +32,7 @@ export default function Home() {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    fetchCharacters();
-  }, [currentPage]);
-
-
+  
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const currentCharacters = characters.slice(startIndex, endIndex);

@@ -32,12 +32,13 @@ export default function CharacterCard({ character }) {
           alt={character.name}
           width={500}
           height={300}
+          className={styles.characterImage}
         />
       </div>
 
       <h2 className={styles.characterInfo}>{character.name}</h2>
       <h3 className={`${styles.subtitle} ${styles.characterInfo}`}>
-        <h4 className={styles.affiliationText}>Afiliação:</h4>
+        <h4 className={styles.affiliationText}>Aliados:</h4>
         {character.allies.map((ally, index) => (
           <p key={index} className={styles.allyText}>
           {ally.charAt(0).toUpperCase() + ally.slice(1).toLowerCase()}
